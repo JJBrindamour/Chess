@@ -19,7 +19,6 @@ public class GridManager : MonoBehaviour
     [SerializeField] private Piece whiteKing;
     [SerializeField] private Piece whiteQueen;
     [SerializeField] private Piece whitePawn;
-    [SerializeField] private Piece openSpace;
 
 
     void Start() {
@@ -41,97 +40,112 @@ public class GridManager : MonoBehaviour
                     var piece = Instantiate(whiteRook, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
                     piece.Init(x, y, "wrl");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
+                    spawnedTile.piece = piece;
                 } else if (x == 1 && y == 0) {
                     var piece = Instantiate(whiteKnight, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
                     piece.Init(x, y, "wkl");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
+                    spawnedTile.piece = piece;
                 } else if (x == 2 && y == 0) {
                     var piece = Instantiate(whiteBishop, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
                     piece.Init(x, y, "wbl");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
+                    spawnedTile.piece = piece;
                 } else if (x == 3 && y == 0) {
                     var piece = Instantiate(whiteQueen, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
                     piece.Init(x, y, "wq");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
+                    spawnedTile.piece = piece;
                 } else if (x == 4 && y == 0) {
                     var piece = Instantiate(whiteKing, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
                     piece.Init(x, y, "wk");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
+                    spawnedTile.piece = piece;
                 } else if (x == 5 && y == 0) {
                     var piece = Instantiate(whiteBishop, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
                     piece.Init(x, y, "wbr");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
+                    spawnedTile.piece = piece;
                 } else if (x == 6 && y == 0) {
                     var piece = Instantiate(whiteKnight, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
                     piece.Init(x, y, "wkl");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
+                    spawnedTile.piece = piece;
                 } else if (x == 7 && y == 0) {
                     var piece = Instantiate(whiteRook, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
                     piece.Init(x, y, "wrl");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
+                    spawnedTile.piece = piece;
                 } else if (y == 1) {
                     var piece = Instantiate(whitePawn, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
                     piece.Init(x, y, "wp");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
+                    spawnedTile.piece = piece;
                 } else if (x == 0 && y == 7){
                     var piece = Instantiate(blackRook, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
                     piece.Init(x, y, "brl");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
+                    spawnedTile.piece = piece;
                 } else if (x == 1 && y == 7) {
                     var piece = Instantiate(blackKnight, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
                     piece.Init(x, y, "bkl");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
+                    spawnedTile.piece = piece;
                 } else if (x == 2 && y == 7) {
                     var piece = Instantiate(blackBishop, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
                     piece.Init(x, y, "bbl");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
+                    spawnedTile.piece = piece;
                 } else if (x == 3 && y == 7) {
                     var piece = Instantiate(blackQueen, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
                     piece.Init(x, y, "bq");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
+                    spawnedTile.piece = piece;
                 } else if (x == 4 && y == 7) {
                     var piece = Instantiate(blackKing, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
                     piece.Init(x, y, "bk");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
+                    spawnedTile.piece = piece;
                 } else if (x == 5 && y == 7) {
                     var piece = Instantiate(blackBishop, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
                     piece.Init(x, y, "bbr");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
+                    spawnedTile.piece = piece;
                 } else if (x == 6 && y == 7) {
                     var piece = Instantiate(blackKnight, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
                     piece.Init(x, y, "bkr");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
+                    spawnedTile.piece = piece;
                 } else if (x == 7 && y == 7) {
                     var piece = Instantiate(blackRook, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
                     piece.Init(x, y, "brr");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
+                    spawnedTile.piece = piece;
                 } else if (y == 6) {
                     var piece = Instantiate(blackPawn, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
                     piece.Init(x, y, "bp");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
+                    spawnedTile.piece = piece;
                 } else {
-                    var piece = Instantiate(openSpace, new Vector3(scale * x, scale * y), Quaternion.identity);
-                    piece.transform.localScale = scaleVector;
-                    piece.Init(x, y, "os");
-                    spawnedTile.Init(isOffset, x, y, piece);
+                    spawnedTile.Init(isOffset, x, y);
                 }
             }
         }
