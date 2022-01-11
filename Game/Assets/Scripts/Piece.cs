@@ -2,18 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Peice : MonoBehaviour
+public class Piece : MonoBehaviour
 {
-    private int x;
-    private int y;
+    protected int x;
+    protected int y;
+    protected string type;
 
-    public void Init(int xcoord, int ycoord){
+    public void Init(int xcoord, int ycoord, string peiceType){
         x = xcoord;
         y = ycoord;
-    }
-
-    private void OnMouseDown() {
-        
+        type = peiceType;
     }
 
     private bool isMoveAllowed(int x, int y){

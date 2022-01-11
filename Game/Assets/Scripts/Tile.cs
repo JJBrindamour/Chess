@@ -8,11 +8,12 @@ public class Tile : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] public GameObject highlight;
     public int x, y;
-    public void Init(bool isOffset, int xcoord, int ycoord) {
+    public Piece piece;
+    public void Init(bool isOffset, int xcoord, int ycoord, Piece startPiece) {
         spriteRenderer.color = isOffset ? secondaryCol : primaryCol;
         x = xcoord;
         y = ycoord;
-        
+        piece = startPiece;
     }
 
     void OnMouseEnter() {
