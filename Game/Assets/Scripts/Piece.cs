@@ -8,10 +8,11 @@ public class Piece : MonoBehaviour
     protected int y;
     protected string type;
 
-    public void Init(int xcoord, int ycoord, string peiceType){
+    public void Init(int xcoord, int ycoord, string pieceType){
         x = xcoord;
         y = ycoord;
-        type = peiceType;
+        type = pieceType;
+        name = pieceType.ToUpper();
     }
 
     private bool isMoveAllowed(int x, int y){

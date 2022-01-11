@@ -87,7 +87,7 @@ public class GridManager : MonoBehaviour
                 } else if (y == 1) {
                     var piece = Instantiate(whitePawn, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
-                    piece.Init(x, y, "wp");
+                    piece.Init(x, y, "wp" + (x + 1).ToString());
                     spawnedTile.Init(isOffset, x, y);
                     spawnedTile.piece = piece;
                 } else if (x == 0 && y == 7){
@@ -141,7 +141,7 @@ public class GridManager : MonoBehaviour
                 } else if (y == 6) {
                     var piece = Instantiate(blackPawn, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
-                    piece.Init(x, y, "bp");
+                    piece.Init(x, y, "bp" + (x + 1).ToString());
                     spawnedTile.Init(isOffset, x, y);
                     spawnedTile.piece = piece;
                 } else {
