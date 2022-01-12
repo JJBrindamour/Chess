@@ -22,4 +22,8 @@ public class Tile : MonoBehaviour
     void OnMouseExit() {
         highlight.SetActive(false);
     }
+
+    void OnMouseDown() {
+
+    }
 }

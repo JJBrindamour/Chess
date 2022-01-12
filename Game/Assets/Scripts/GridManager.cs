@@ -57,13 +57,13 @@ public class GridManager : MonoBehaviour
                 } else if (x == 3 && y == 0) {
                     var piece = Instantiate(whiteQueen, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
-                    piece.Init(x, y, "wq");
+                    piece.Init(x, y, "wq_");
                     spawnedTile.Init(isOffset, x, y);
                     spawnedTile.piece = piece;
                 } else if (x == 4 && y == 0) {
                     var piece = Instantiate(whiteKing, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
-                    piece.Init(x, y, "wk");
+                    piece.Init(x, y, "wK_");
                     spawnedTile.Init(isOffset, x, y);
                     spawnedTile.piece = piece;
                 } else if (x == 5 && y == 0) {
@@ -111,13 +111,13 @@ public class GridManager : MonoBehaviour
                 } else if (x == 3 && y == 7) {
                     var piece = Instantiate(blackQueen, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
-                    piece.Init(x, y, "bq");
+                    piece.Init(x, y, "bq_");
                     spawnedTile.Init(isOffset, x, y);
                     spawnedTile.piece = piece;
                 } else if (x == 4 && y == 7) {
                     var piece = Instantiate(blackKing, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
-                    piece.Init(x, y, "bk");
+                    piece.Init(x, y, "bK_");
                     spawnedTile.Init(isOffset, x, y);
                     spawnedTile.piece = piece;
                 } else if (x == 5 && y == 7) {
