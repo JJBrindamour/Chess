@@ -19,6 +19,8 @@ public class GridManager : MonoBehaviour
     [SerializeField] private Piece whiteKing;
     [SerializeField] private Piece whiteQueen;
     [SerializeField] private Piece whitePawn;
+    
+    public string playerColor = "w";
 
 
     void Start() {
