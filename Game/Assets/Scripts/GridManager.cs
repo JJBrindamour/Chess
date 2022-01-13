@@ -47,7 +47,7 @@ public class GridManager : MonoBehaviour
                 } else if (x == 1 && y == 0) {
                     var piece = Instantiate(whiteKnight, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
-                    piece.Init(x, y, "wkl");
+                    piece.Init(x, y, "wnl");
                     spawnedTile.Init(isOffset, x, y);
                     spawnedTile.piece = piece;
                 } else if (x == 2 && y == 0) {
@@ -65,7 +65,7 @@ public class GridManager : MonoBehaviour
                 } else if (x == 4 && y == 0) {
                     var piece = Instantiate(whiteKing, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
-                    piece.Init(x, y, "wK_");
+                    piece.Init(x, y, "wk_");
                     spawnedTile.Init(isOffset, x, y);
                     spawnedTile.piece = piece;
                 } else if (x == 5 && y == 0) {
@@ -77,7 +77,7 @@ public class GridManager : MonoBehaviour
                 } else if (x == 6 && y == 0) {
                     var piece = Instantiate(whiteKnight, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
-                    piece.Init(x, y, "wkl");
+                    piece.Init(x, y, "wnl");
                     spawnedTile.Init(isOffset, x, y);
                     spawnedTile.piece = piece;
                 } else if (x == 7 && y == 0) {
@@ -119,7 +119,7 @@ public class GridManager : MonoBehaviour
                 } else if (x == 4 && y == 7) {
                     var piece = Instantiate(blackKing, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
-                    piece.Init(x, y, "bK_");
+                    piece.Init(x, y, "bk_");
                     spawnedTile.Init(isOffset, x, y);
                     spawnedTile.piece = piece;
                 } else if (x == 5 && y == 7) {
@@ -131,7 +131,7 @@ public class GridManager : MonoBehaviour
                 } else if (x == 6 && y == 7) {
                     var piece = Instantiate(blackKnight, new Vector3(scale * x, scale * y), Quaternion.identity);
                     piece.transform.localScale = scaleVector;
-                    piece.Init(x, y, "bkr");
+                    piece.Init(x, y, "bnr");
                     spawnedTile.Init(isOffset, x, y);
                     spawnedTile.piece = piece;
                 } else if (x == 7 && y == 7) {

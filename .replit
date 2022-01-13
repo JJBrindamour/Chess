@@ -1,0 +1,2 @@
+language = "csharp"
+run = "csc Game/Assets/Scripts/GridManager.cs"
