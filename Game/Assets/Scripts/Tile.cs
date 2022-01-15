@@ -29,4 +29,15 @@ public class Tile : MonoBehaviour
 			tile.highlight.SetActive(true)
 		}
     }
+
+	void OnMouseUp() {
+		
+	}
+
+	void OnMouseDrag() {
+		mousePos = (Input.mousePosition);
+        Vector2 pos= new Vector2(Camera.main.ScreenToWorldPoint(mousePos).x, Camera.main.ScreenToWorldPoint(mousePos).y);
+		
+		piece.transform.mousePosition = pos;
+	}
 }

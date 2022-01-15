@@ -16,10 +16,6 @@ public class Piece : MonoBehaviour
         name = pieceType.ToUpper();
     }
 
-    private bool isMoveAllowed(int x, int y){
-        return true;
-    }
-
     List<Tile> legalMoves() {
         List<Tile> legalMoves = new List<Tile>();
         string pieceType = type.Remove(0, 1).Remove(2, 1);
