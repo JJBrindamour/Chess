@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,19 +26,31 @@ public class Tile : MonoBehaviour
     }
 
     void OnMouseDown() {
-		foreach (tile in piece.legalMoves()) {
-			tile.highlight.SetActive(true)
-		}
+		try {
+            foreach (Tile tile in piece.legalMoves()) {
+                tile.highlight.SetActive(true);
+            }
+            GameObject.Find("GridManager").GetComponent<GridManager>().selectedPiece = piece;
+            Debug.Log(GameObject.Find("GridManager").GetComponent<GridManager>().selectedPiece);
+        } catch (NullReferenceException) {}
     }
 
 	void OnMouseUp() {
-		
+        try {
+            int scale = GameObject.Find("GridManager").GetComponent<GridManager>().scale;
+            Piece selectedPiece = GameObject.Find("GridManager").GetComponent<GridManager>().selectedPiece;
+            selectedPiece.transform.position = new Vector3(scale * x, scale * y);
+            GameObject.Find($"Tile ({selectedPiece.x}, {selectedPiece.y})").GetComponent<Tile>().piece = null;
+            selectedPiece.x = x;
+            selectedPiece.y = y;
+            GameObject.Find("GridManager").GetComponent<GridManager>().selectedPiece = null;
+        } catch (NullReferenceException) {}
 	}
 
 	void OnMouseDrag() {
-		mousePos = (Input.mousePosition);
+		var mousePos = (Input.mousePosition);
         Vector2 pos= new Vector2(Camera.main.ScreenToWorldPoint(mousePos).x, Camera.main.ScreenToWorldPoint(mousePos).y);
 		
-		piece.transform.mousePosition = pos;
+        try {piece.transform.position = pos;} catch (NullReferenceException) {}
 	}
 }

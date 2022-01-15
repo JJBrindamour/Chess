@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
-    [SerializeField] private int width, height, scale;
+    [SerializeField] public int width, height, scale;
     [SerializeField] private Tile tile;
     [SerializeField] private Transform cam;
     [SerializeField] private Piece blackRook;
@@ -21,6 +21,7 @@ public class GridManager : MonoBehaviour
     [SerializeField] private Piece whitePawn;
     
     public string playerColor = "w";
+    public Piece selectedPiece;
 
 
     void Start() {
